@@ -1,0 +1,102 @@
+/* MedPrime Professional Style Sheet */
+:root {
+    --primary-cyan: #00f2ff;
+    --primary-purple: #7000ff;
+    --dark-bg: #0a0b1e;
+    --glass-bg: rgba(26, 27, 33, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(10, 11, 30, 0.85), rgba(10, 11, 30, 0.9)), 
+                url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Professional Glass Container */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* Header Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.brand { font-size: 28px; font-weight: 800; text-decoration: none; color: white; letter-spacing: -1px; }
+.brand span { color: var(--primary-cyan); }
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px 15px;
+}
+
+td:first-child { border-radius: 12px 0 0 12px; }
+td:last-child { border-radius: 0 12px 12px 0; }
+
+/* Status Badges */
+.badge-pending {
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--primary-cyan);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+}
+
+/* Action Buttons */
+.btn-action {
+    background: var(--primary-purple);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s all ease;
+}
+
+.btn-action:hover {
+    background: var(--primary-cyan);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 255, 0.4);
+}
